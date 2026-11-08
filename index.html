@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Karla • Pompompurin Showcase de parte de Rome</title>
+  
+  <!-- Fonts: Comfortaa & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            custard: {
+              50: '#fffdf5',
+              100: '#fff9ec',
+              200: '#fef3c7',
+              300: '#fde68a',
+              400: '#fcd34d',
+              500: '#f59e0b',
+            },
+            cocoa: {
+              DEFAULT: '#592100',
+              soft: '#78350f',
+              light: '#92400e',
+              dark: '#351000',
+            },
+            cream: '#fff9ec',
+            caramel: '#d97706',
+          },
+          fontFamily: {
+            title: ['Comfortaa', 'cursive', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #fff9ec;
+      background-image: 
+        radial-gradient(#ecdca9 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: #351000;
+    }
+
+    /* Tactile squish button */
+    .btn-squish {
+      transition: all 0.15s ease;
+      box-shadow: 0 3px 0 #592100;
+    }
+    .btn-squish:active {
+      transform: translateY(3px);
+      box-shadow: 0 0 0 #592100;
+    }
+
+    /* Subtle hover lifts */
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -4px rgba(89, 33, 0, 0.12);
+    }
+  </style>
+</head>
+<body class="font-body selection:bg-custard-300 selection:text-cocoa-dark min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- NAVBAR                                     -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-[#fff9ec]/90 backdrop-blur-md border-b border-custard-300/80 shadow-xs">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Dedication -->
+      <a href="#inicio" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-custard-200 border-2 border-cocoa flex items-center justify-center overflow-hidden p-0.5 shadow-inner">
+          <img src="images/vecteezy_cute-pompompurin-sanrio_54755124.jpg" alt="Pompompurin Icon" class="w-full h-full object-contain" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-title font-bold text-cocoa text-sm sm:text-base leading-tight">
+            Karla &amp; Rome
+          </span>
+          <span class="text-[11px] font-medium text-cocoa-light">
+            Detalle especial de Rome 🍮
+          </span>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <nav class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-cocoa">
+        <a href="#planes" class="hover:text-caramel transition-colors hidden sm:inline">Planes</a>
+        <a href="#musica" class="hover:text-caramel transition-colors hidden sm:inline">Música</a>
+        <a href="#galeria" class="hover:text-caramel transition-colors hidden sm:inline">Purin</a>
+        <a href="#notas" class="hover:text-caramel transition-colors hidden sm:inline">Notas</a>
+        <a href="#mensaje" class="btn-squish bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold px-4 py-2 rounded-full border border-cocoa flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-base">mail</span>
+          <span>Mensaje de Rome</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO: NATURAL, SINCERE & COZY              -->
+  <!-- ========================================== -->
+  <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+    
+    <section id="inicio" class="bg-gradient-to-br from-custard-100 via-white to-custard-200 rounded-3xl p-6 sm:p-10 border-2 border-cocoa shadow-[0_10px_25px_rgba(89,33,0,0.08)] relative overflow-hidden">
+      
+      <!-- Subtle top badge -->
+      <div class="inline-flex items-center gap-2 bg-white/90 px-3.5 py-1 rounded-full border border-custard-400 shadow-xs text-xs font-semibold text-cocoa mb-4">
+        <span>🍮</span>
+        <span>Para Karla con mucho cariño</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Sincere Love Message (Not cheesy, but real) -->
+        <div class="md:col-span-7 space-y-4">
+          <h1 class="font-title font-extrabold text-cocoa text-3xl sm:text-4xl leading-tight">
+            Un detalle para ti, Karla ✨
+          </h1>
+
+          <p class="font-body text-cocoa-light text-base sm:text-lg leading-relaxed">
+            Preparé este espacio con temática de <strong class="text-cocoa font-bold">Pompompurin</strong> pensando en ti. Quería darte algo hecho a mano, bonito y diferente para recordarte lo mucho que te quiero, sacarte una sonrisa y que tengas un lugar al cual entrar cuando quieras desconectar un ratito.
+          </p>
+
+          <p class="font-body text-cocoa text-sm sm:text-base font-semibold leading-relaxed">
+            Sin rodeos ni cosas exageradas: me encanta compartir mi tiempo contigo, verte bien y saber que cuento contigo igual que tú conmigo.
+          </p>
+
+          <!-- Interactive Actions -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button onclick="interactPurin(event)" class="btn-squish bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-sm px-5 py-2.5 rounded-full border-2 border-cocoa flex items-center gap-2">
+              <span class="text-lg">🍮</span>
+              <span>Saludar a Purin</span>
+            </button>
+
+            <a href="#planes" class="btn-squish bg-white hover:bg-custard-50 text-cocoa font-title font-bold text-sm px-5 py-2.5 rounded-full border border-cocoa flex items-center gap-2">
+              <span class="text-lg">🎡</span>
+              <span>Elegir un plan para salir</span>
+            </a>
+          </div>
+
+          <!-- Counter -->
+          <div class="pt-1 text-xs text-cocoa-light font-medium flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span>
+            <span>Sonrisas provocadas: <strong id="smileCount" class="text-cocoa font-bold">14</strong></span>
+          </div>
+        </div>
+
+        <!-- Right: Pompompurin Interactive Figure -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center">
+          <div class="bg-white rounded-3xl p-6 border-2 border-cocoa shadow-md text-center max-w-xs w-full relative">
+            
+            <div class="text-[11px] font-bold text-cocoa-light uppercase tracking-wider mb-2">
+              Pompompurin • Toca para interactuar
+            </div>
+
+            <!-- Image with interactive trigger -->
+            <div onclick="interactPurin(event)" class="cursor-pointer group flex items-center justify-center p-2 rounded-2xl bg-custard-50 hover:bg-custard-100 transition-all">
+              <img id="purinHeroImage" src="images/vecteezy_cute-pompompurin-sanrio_54755124.jpg" alt="Pompompurin" class="w-48 h-48 object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-200" />
+            </div>
+
+            <!-- Speech bubble -->
+            <div class="mt-3 p-3 bg-custard-100 rounded-xl border border-custard-300 text-xs text-cocoa font-semibold text-center min-h-[46px] flex items-center justify-center shadow-inner">
+              <span id="purinPhrase">"Hola Karla, Rome te manda un abrazo fuerte 🍮"</span>
+            </div>
+
+            <button onclick="switchPurinPose()" class="mt-2 text-xs font-semibold text-cocoa hover:text-caramel underline">
+              Cambiar pose de Purin 🐾
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- REAL PLANS / DATE ROULETTE                 -->
+    <!-- ========================================== -->
+    <section id="planes" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-cocoa shadow-sm space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-custard-200 pb-4">
+        <div>
+          <h2 class="font-title font-bold text-cocoa text-2xl sm:text-3xl flex items-center gap-2">
+            <span>¿Qué hacemos la próxima vez? 🎡</span>
+          </h2>
+          <p class="text-cocoa-light text-sm mt-1">
+            Planes reales para salir o pasarla bien juntos cuando nos veamos:
+          </p>
+        </div>
+
+        <button onclick="spinDateWheel()" id="spinWheelBtn" class="btn-squish self-start sm:self-auto bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-sm px-5 py-2.5 rounded-full border border-cocoa flex items-center gap-2">
+          <span class="text-base">🎲</span>
+          <span>Girar ruleta de planes</span>
+        </button>
+      </div>
+
+      <!-- Spun Plan Featured Highlight -->
+      <div id="featuredPlanBox" class="bg-gradient-to-r from-custard-100 to-amber-50 rounded-2xl p-5 border border-custard-300 flex items-start gap-4 transition-all">
+        <div class="w-12 h-12 rounded-full bg-custard-300 border border-cocoa flex items-center justify-center text-2xl shrink-0">
+          <span id="featuredPlanIcon">☕</span>
+        </div>
+        <div class="flex-grow">
+          <span class="text-[11px] font-bold text-cocoa-light uppercase tracking-wider">Plan elegido por el destino:</span>
+          <h3 id="featuredPlanTitle" class="font-title font-bold text-cocoa text-lg sm:text-xl mt-0.5">
+            Tarde de café y plática larga ☕🍰
+          </h3>
+          <p id="featuredPlanDesc" class="text-sm text-cocoa-light mt-1">
+            Ir a un lugar tranquilo, pedir algo rico y platicar de todo sin prisas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Plans Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+        
+        <div class="card-hover p-4 rounded-2xl bg-custard-50 border border-custard-200 flex flex-col justify-between">
+          <div>
+            <span class="text-2xl">🌅</span>
+            <h4 class="font-title font-bold text-cocoa text-sm mt-2">Caminata al atardecer</h4>
+            <p class="text-xs text-cocoa-light mt-1">
+              Dar una vuelta tranquilos, ver la caída del sol y platicar de nuestras cosas.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-cocoa-light mt-3 block">Pendiente 📍</span>
+        </div>
+
+        <div class="card-hover p-4 rounded-2xl bg-custard-50 border border-custard-200 flex flex-col justify-between">
+          <div>
+            <span class="text-2xl">🎬</span>
+            <h4 class="font-title font-bold text-cocoa text-sm mt-2">Noche de pelis o serie</h4>
+            <p class="text-xs text-cocoa-light mt-1">
+              Algo para comer, botanita, sillón cómodo y ver algo que tengamos pendiente los dos.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-cocoa-light mt-3 block">Modo relax 🍿</span>
+        </div>
+
+        <div class="card-hover p-4 rounded-2xl bg-custard-50 border border-custard-200 flex flex-col justify-between">
+          <div>
+            <span class="text-2xl">🍦</span>
+            <h4 class="font-title font-bold text-cocoa text-sm mt-2">Ir por un helado o flan</h4>
+            <p class="text-xs text-cocoa-light mt-1">
+              Caminar un rato, comer algo dulce y despejarnos de la rutina del día a día.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-cocoa-light mt-3 block">Un clásico 🍮</span>
+        </div>
+
+        <div class="card-hover p-4 rounded-2xl bg-custard-50 border border-custard-200 flex flex-col justify-between">
+          <div>
+            <span class="text-2xl">🚗</span>
+            <h4 class="font-title font-bold text-cocoa text-sm mt-2">Escapada de fin de semana</h4>
+            <p class="text-xs text-cocoa-light mt-1">
+              Un día fuera de la ciudad, conocer un pueblito o simplemente cambiar de aire juntos.
+            </p>
+          </div>
+          <span class="text-[11px] font-semibold text-cocoa-light mt-3 block">Próximamente 🛣️</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- CANCIONES QUE ME RECUERDAN A TI (VIDEOS)   -->
+    <!-- ========================================== -->
+    <section id="musica" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-cocoa shadow-sm space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-custard-200 pb-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 bg-custard-200 text-cocoa px-3 py-1 rounded-full text-xs font-bold border border-custard-400 mb-2">
+            <span>🎵</span>
+            <span>Nuestra Música</span>
+          </div>
+          <h2 class="font-title font-bold text-cocoa text-2xl sm:text-3xl flex items-center gap-2">
+            tu sabes que la musica es una parte de mi y en esa parte de mi tambien estas tu 🎧
+          </h2>
+          <p class="text-cocoa-light text-sm mt-1">
+             es inevitable que cada vez que las escucho me acuerdo de ti y de lo especial que eres para mí:
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-2 text-xs font-semibold text-cocoa-light bg-custard-50 px-3 py-1.5 rounded-full border border-custard-200">
+          <span>▶️</span>
+          <span>Videos listos para reproducir</span>
+        </div>
+      </div>
+
+      <!-- Videos Cards Grid (Archivos MP4 locales listos para GitHub) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Video 1: Hamilton - GRACIAS X APARECER -->
+        <div class="card-hover bg-custard-50/80 rounded-2xl border-2 border-cocoa p-4 sm:p-5 flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-black border border-cocoa/20 shadow-inner mb-3.5 relative">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+                <source src="videos/hamilton_gracias_x_aparecer.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-cocoa-light font-bold mb-1">
+              <span class="flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                Hamilton
+              </span>
+              <span class="bg-custard-200 text-cocoa px-2 py-0.5 rounded-full text-[11px] font-semibold">Canción Especial</span>
+            </div>
+
+            <h3 class="font-title font-bold text-cocoa text-lg leading-snug">
+              GRACIAS X APARECER 🤍
+            </h3>
+
+            <p class="text-xs sm:text-sm text-cocoa-light mt-1.5 leading-relaxed font-semibold">
+              "Lo que más me gusta de ti Es que los días malos tu los vuelves mejor"
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-custard-200 mt-4 flex items-center justify-between text-xs text-cocoa-light">
+            <span>Para Karla 🍮</span>
+            <span class="text-amber-700 font-semibold">✨</span>
+          </div>
+        </div>
+
+        <!-- Video 2: La Pantera - AMORTAL -->
+        <div class="card-hover bg-custard-50/80 rounded-2xl border-2 border-cocoa p-4 sm:p-5 flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-black border border-cocoa/20 shadow-inner mb-3.5 relative">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+                <source src="videos/la_pantera_amortal.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-cocoa-light font-bold mb-1">
+              <span class="flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                La Pantera
+              </span>
+              <span class="bg-custard-200 text-cocoa px-2 py-0.5 rounded-full text-[11px] font-semibold">En repeat</span>
+            </div>
+
+            <h3 class="font-title font-bold text-cocoa text-lg leading-snug">
+              AMORTAL 🎵
+            </h3>
+
+            <p class="text-xs sm:text-sm text-cocoa-light mt-1.5 leading-relaxed font-semibold">
+              teamohastalamuerteymas:)
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-custard-200 mt-4 flex items-center justify-between text-xs text-cocoa-light">
+            <span>De parte de Rome ✨</span>
+            <span class="text-amber-700 font-semibold">🔥</span>
+          </div>
+        </div>
+
+        <!-- Video 3: Juan Luis Guerra - MI BENDICIÓN -->
+        <div class="card-hover bg-custard-50/80 rounded-2xl border-2 border-cocoa p-4 sm:p-5 flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-black border border-cocoa/20 shadow-inner mb-3.5 relative">
+              <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+                <source src="videos/juan_luis_guerra_mi_bendicion.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-cocoa-light font-bold mb-1">
+              <span class="flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                Juan Luis Guerra
+              </span>
+              <span class="bg-custard-200 text-cocoa px-2 py-0.5 rounded-full text-[11px] font-semibold">Canción para ti</span>
+            </div>
+
+            <h3 class="font-title font-bold text-cocoa text-lg leading-snug">
+              Mi Bendición 🌸
+            </h3>
+
+            <p class="text-xs sm:text-sm text-cocoa-light mt-1.5 leading-relaxed font-semibold">
+              "Dicen que las flores no dejaban de cantar tu nombre... eres mi bendición."
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-custard-200 mt-4 flex items-center justify-between text-xs text-cocoa-light">
+            <span>Para Karla con amor 💛</span>
+            <span class="text-amber-700 font-semibold">🌺</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- WHAT ROME VALUES ABOUT KARLA (GENUINE)     -->
+    <!-- ========================================== -->
+    <section class="bg-gradient-to-br from-white to-custard-50 rounded-3xl p-6 sm:p-8 border-2 border-cocoa shadow-sm space-y-6">
+      
+      <div>
+        <h2 class="font-title font-bold text-cocoa text-2xl sm:text-3xl">
+          Lo que de verdad valoro de ti 💛
+        </h2>
+        <p class="text-cocoa-light text-sm mt-1">
+          Cosas que aprecio en nuestro día a día y que hacen que tenerte cerca valga tanto la pena:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <div class="bg-white p-5 rounded-2xl border border-custard-300 shadow-xs card-hover">
+          <div class="w-10 h-10 rounded-full bg-custard-200 flex items-center justify-center text-lg mb-3">
+            ✨
+          </div>
+          <h4 class="font-title font-bold text-cocoa text-base mb-1">Tu autenticidad</h4>
+          <p class="text-sm text-cocoa-light leading-relaxed">
+            Me gusta que eres directa, honesta y no necesitas aparentar nada. Contigo todo se siente real y transparente.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-custard-300 shadow-xs card-hover">
+          <div class="w-10 h-10 rounded-full bg-custard-200 flex items-center justify-center text-lg mb-3">
+            🤝
+          </div>
+          <h4 class="font-title font-bold text-cocoa text-base mb-1">La complicidad</h4>
+          <p class="text-sm text-cocoa-light leading-relaxed">
+            Esa confianza para reírnos de cualquier tontería, para hablar de cosas serias o para apoyarnos cuando el día se pone pesado.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-custard-300 shadow-xs card-hover">
+          <div class="w-10 h-10 rounded-full bg-custard-200 flex items-center justify-center text-lg mb-3">
+            🌿
+          </div>
+          <h4 class="font-title font-bold text-cocoa text-base mb-1">La tranquilidad que das</h4>
+          <p class="text-sm text-cocoa-light leading-relaxed">
+            Estar contigo no es complicado. Es un respiro, es sentir que las cosas están en su lugar y que todo marcha bien.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOTOS DE KARLA & GALERÍA PURIN             -->
+    <!-- ========================================== -->
+    <section id="galeria" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-cocoa shadow-sm space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-custard-200 pb-4">
+        <div>
+          <div class="inline-flex items-center gap-1.5 bg-custard-200 text-cocoa px-3 py-1 rounded-full text-xs font-bold border border-custard-400 mb-2">
+            <span>📸</span>
+            <span>Álbum de Recuerdos</span>
+          </div>
+          <h2 class="font-title font-bold text-cocoa text-2xl sm:text-3xl flex items-center gap-2">
+            Fotos de Karla &amp; Galería Purin 🍮✨
+          </h2>
+          <p class="text-cocoa-light text-sm mt-1">
+            Desde chiquita hasta hoy, con esa misma esencia y esa sonrisa que me encanta:
+          </p>
+        </div>
+        <span class="text-xs font-semibold text-cocoa-light bg-custard-50 px-3 py-1.5 rounded-full border border-custard-200 self-start sm:self-auto">
+          Mis fotos favoritas 💛
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Foto 1: Karla de chiquita -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border-2 border-cocoa text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 overflow-hidden mb-3 shadow-inner flex items-center justify-center">
+            <img src="images/karla_chiquita.jpg" alt="Karla de chiquita" class="w-full h-full object-cover object-top filter drop-shadow-xs" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-amber-200 text-amber-900 px-2 py-0.5 rounded-full uppercase tracking-wider">de chiquita me das ternura 🌸</span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">Karlita</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              aunque no te conoci asi, siempre te voy a tener como mi niña chiquita
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto 2: Karla & Purin Dibujo Sticker -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border-2 border-cocoa text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 overflow-hidden mb-3 shadow-inner flex items-center justify-center p-3">
+            <img src="images/karla_purin_dibujo.jpg" alt="Karla en versión Pompompurin" class="max-h-full max-w-full object-contain filter drop-shadow-xs" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-custard-300 text-cocoa px-2 py-0.5 rounded-full uppercase tracking-wider">mira</span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">Karla &amp; Pompompurin</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              quedo chevere vd? eres tu con el muñequito que te gusta, quiero conocer mas de ti.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto 3: Karla sonriendo / perfil -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border-2 border-cocoa text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 overflow-hidden mb-3 shadow-inner flex items-center justify-center">
+            <img src="images/karla_perfil.jpg" alt="Karla sonriendo" class="w-full h-full object-cover object-center filter drop-shadow-xs" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-amber-200 text-amber-900 px-2 py-0.5 rounded-full uppercase tracking-wider">tmblr </span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">necesito salir mas contigo</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              creeria yo que es de la unica salida donde tenemos fotos, debemos salir mas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto 4: Karla Selfie -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border-2 border-cocoa text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 overflow-hidden mb-3 shadow-inner flex items-center justify-center">
+            <img src="images/karla_selfie.jpg" alt="Karla selfie" class="w-full h-full object-cover object-center filter drop-shadow-xs" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-amber-200 text-amber-900 px-2 py-0.5 rounded-full uppercase tracking-wider">que linda eres ✨</span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">Mandando besito</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              Con esos ojos preciosos que me encantan, te amo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto 5: Purin Contento -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border border-custard-300 text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 flex items-center justify-center p-4 overflow-hidden mb-3 shadow-inner">
+            <img src="images/vecteezy_cute-pompompurin-sanrio_54755124.jpg" alt="Pompompurin Feliz" class="max-h-full max-w-full object-contain filter drop-shadow-sm" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-custard-200 text-cocoa px-2 py-0.5 rounded-full uppercase tracking-wider">Pompompurin 🍮</span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">Purin Contento</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              asi soy yo contigo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto 6: Purin Celebrando -->
+        <div class="card-hover bg-custard-50 p-4 rounded-2xl border border-custard-300 text-center flex flex-col justify-between shadow-xs">
+          <div class="w-full h-80 bg-white rounded-xl border border-custard-200 flex items-center justify-center p-4 overflow-hidden mb-3 shadow-inner">
+            <img src="images/vecteezy_sanrio-pompompurin-one_54755141.jpg" alt="Pompompurin Manos Arriba" class="max-h-full max-w-full object-contain filter drop-shadow-sm" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold bg-custard-200 text-cocoa px-2 py-0.5 rounded-full uppercase tracking-wider">Modo Relax 🐾</span>
+            <h4 class="font-title font-bold text-cocoa text-base mt-1.5">Purin Celebrando</h4>
+            <p class="text-xs text-cocoa-light mt-0.5">
+              hay que salir y ganar algo para ser este ve.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- ROME'S LETTER TO KARLA (SINCERE & CLEAN)   -->
+    <!-- ========================================== -->
+    <section id="mensaje" class="bg-gradient-to-br from-[#fff7e6] via-white to-[#fff0cb] rounded-3xl p-6 sm:p-10 border-2 border-cocoa shadow-md relative">
+      
+      <div class="max-w-2xl mx-auto space-y-5">
+        
+        <div class="flex items-center justify-between border-b border-custard-300 pb-3">
+          <span class="font-title font-bold text-cocoa text-xs sm:text-sm tracking-wider uppercase">
+            Carta de Rome para Karla
+          </span>
+          <span class="text-xs text-cocoa-light font-medium">De verdad y con cariño</span>
+        </div>
+
+        <div class="space-y-4 text-cocoa-dark font-body text-base sm:text-lg leading-relaxed">
+          <p class="font-bold text-cocoa text-xl">
+            Hola Karla,
+          </p>
+
+          <p>
+            Quería hacerte este detalle sencillo pero con dedicación. A veces con el día a día, las responsabilidades o la rutina no me detengo a decir las cosas como son: <strong>te quiero muchísimo</strong> y me hace muy feliz tenerte en mi vida.
+          </p>
+
+          <p>
+            Me gusta ver cómo te esfuerzas por lo que quieres, me gusta escucharte cuando me cuentas tus cosas y me encanta cuando nos reímos juntos. No necesito adornar las cosas con palabras rebuscadas: estar contigo es de lo mejor que me pasa.
+          </p>
+
+          <p>
+            Espero que esta página te guste, que te saque una sonrisa y que cuando tengas un día cansado recuerdes que aquí estoy para ti, siempre apoyándote, tu sabes que puedes contarconmigopatodo te amo.
+          </p>
+
+          <div class="pt-4 border-t border-custard-300 flex items-center justify-between">
+            <div>
+              <p class="font-title font-bold text-cocoa text-base">Rome</p>
+              <p class="text-xs text-cocoa-light">Para ti, siempre.</p>
+            </div>
+            <button onclick="triggerConfettiLove()" class="btn-squish bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-xs px-4 py-2 rounded-full border border-cocoa flex items-center gap-1.5">
+              <span>🍮</span>
+              <span>Un abrazo virtual</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN PRIVADA DE NOTAS (CON CONTRASEÑA) -->
+    <!-- ========================================== -->
+    <section id="notas" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-cocoa shadow-sm space-y-6">
+      
+      <!-- VISTA BLOQUEADA (PIDE CLAVE) -->
+      <div id="notesLockedView" class="py-8 px-4 text-center max-w-md mx-auto space-y-4">
+        <div class="w-16 h-16 rounded-full bg-custard-200 border-2 border-cocoa flex items-center justify-center text-3xl mx-auto shadow-inner">
+          🔒
+        </div>
+        
+        <div>
+          <h3 class="font-title font-bold text-cocoa text-xl sm:text-2xl">
+            Buzón Privado de Notas
+          </h3>
+          <p class="text-xs text-cocoa-light mt-1">
+            Sección protegida con clave para Karla &amp; Rome
+          </p>
+        </div>
+
+        <!-- Anuncio exacto de la clave solicitado por el usuario -->
+        <div class="bg-custard-100 p-4 rounded-2xl border border-custard-300 text-xs sm:text-sm text-cocoa-light font-medium text-center shadow-xs">
+          <p class="font-bold text-cocoa text-xs mb-1">Pista de acceso:</p>
+          <p class="italic text-cocoa font-semibold">"la clave es el msj del 05/11/26 11:34 am el ultimo de los 4"</p>
+        </div>
+
+        <!-- Input de contraseña y botón -->
+        <div class="space-y-3 pt-1">
+          <div class="relative">
+            <input type="password" id="notesPassInput" placeholder="Introduce la clave..." onkeyup="if(event.key==='Enter') unlockNotes()" class="w-full px-4 py-3 rounded-xl border-2 border-custard-400 focus:outline-none focus:border-cocoa text-center font-title font-bold text-cocoa bg-custard-50 placeholder:font-normal placeholder:text-xs" />
+          </div>
+
+          <p id="notesPassError" class="text-xs text-rose-600 font-bold hidden">
+            Clave incorrecta. Pista: es el último mensaje de esa hora 😉
+          </p>
+
+          <button onclick="unlockNotes()" class="btn-squish w-full bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-sm py-3 rounded-xl border border-cocoa flex items-center justify-center gap-2">
+            <span>🔑</span>
+            <span>Desbloquear Buzón</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- VISTA DESBLOQUEADA -->
+      <div id="notesUnlockedView" class="hidden space-y-6">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-custard-200 pb-4">
+          <div>
+            <div class="inline-flex items-center gap-1.5 bg-custard-200 text-cocoa px-3 py-1 rounded-full text-xs font-bold border border-custard-400 mb-2">
+              <span>💌</span>
+              <span>Buzón Abierto</span>
+            </div>
+            <h3 class="font-title font-bold text-cocoa text-xl sm:text-2xl">
+              Nuestras Notas &amp; Recordatorios
+            </h3>
+            <p class="text-xs sm:text-sm text-cocoa-light mt-0.5">
+              Puedes agregar nuevas notas, editarlas o borrarlas. Se guardan en tu navegador y en el código.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <button onclick="copyNotesCodeForGitHub()" title="Copiar notas para pegarlas en el código de GitHub" class="btn-squish bg-custard-100 hover:bg-custard-200 text-cocoa text-xs font-bold px-3 py-2 rounded-xl border border-cocoa flex items-center gap-1.5 shadow-xs">
+              <span class="material-symbols-outlined text-sm">content_copy</span>
+              <span>Copiar para GitHub</span>
+            </button>
+            <button onclick="lockNotes()" title="Bloquear el buzón" class="btn-squish bg-white hover:bg-custard-50 text-cocoa text-xs font-bold px-3 py-2 rounded-xl border border-cocoa flex items-center gap-1 shadow-xs">
+              <span>🔒</span>
+              <span>Bloquear</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Formulario para agregar nueva nota -->
+        <div class="bg-custard-50 p-4 sm:p-5 rounded-2xl border border-custard-300 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-cocoa">
+            <span>Escribir una nueva nota:</span>
+            <div class="flex items-center gap-2">
+              <span>De parte de:</span>
+              <select id="newNoteAuthor" class="px-2.5 py-1 rounded-lg border border-custard-400 bg-white text-xs font-bold text-cocoa focus:outline-none">
+                <option value="Rome">Rome</option>
+                <option value="Karla">Karla</option>
+                <option value="Karla & Rome">Karla &amp; Rome</option>
+              </select>
+              <select id="newNoteIcon" class="px-2 py-1 rounded-lg border border-custard-400 bg-white text-xs focus:outline-none">
+                <option value="🍮">🍮 Purin</option>
+                <option value="💛">💛 Cariño</option>
+                <option value="🌸">🌸 Flor</option>
+                <option value="✨">✨ Magia</option>
+                <option value="🎵">🎵 Música</option>
+                <option value="💌">💌 Carta</option>
+              </select>
+            </div>
+          </div>
+
+          <textarea id="newNoteText" rows="2" placeholder="Escribe tu mensaje o recordatorio aquí..." class="w-full px-4 py-2.5 rounded-xl border border-custard-400 focus:outline-none focus:ring-2 focus:ring-cocoa font-body text-sm bg-white text-cocoa resize-none"></textarea>
+
+          <div class="flex justify-end">
+            <button onclick="saveNewNote()" class="btn-squish bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl border border-cocoa flex items-center gap-1.5 shadow-xs">
+              <span>💾</span>
+              <span>Guardar nota</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lista de Notas dinámicas -->
+        <div id="notesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-1">
+          <!-- Las notas se renderizan dinámicamente con JavaScript -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MODAL PARA EDITAR NOTA -->
+    <div id="editNoteModal" class="fixed inset-0 bg-cocoa-dark/70 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl p-6 border-2 border-cocoa max-w-md w-full shadow-2xl space-y-4">
+        <div class="flex items-center justify-between border-b border-custard-200 pb-2">
+          <h4 class="font-title font-bold text-cocoa text-lg flex items-center gap-2">
+            <span>✏️</span>
+            <span>Editar Nota</span>
+          </h4>
+          <button onclick="closeEditNoteModal()" class="text-cocoa-light hover:text-cocoa text-xl font-bold">✕</button>
+        </div>
+
+        <input type="hidden" id="editNoteId" />
+
+        <div class="flex items-center gap-2 text-xs font-bold text-cocoa">
+          <span>Autor:</span>
+          <select id="editNoteAuthor" class="px-2.5 py-1 rounded-lg border border-custard-400 bg-white text-xs font-bold text-cocoa">
+            <option value="Rome">Rome</option>
+            <option value="Karla">Karla</option>
+            <option value="Karla & Rome">Karla &amp; Rome</option>
+          </select>
+          <select id="editNoteIcon" class="px-2 py-1 rounded-lg border border-custard-400 bg-white text-xs">
+            <option value="🍮">🍮 Purin</option>
+            <option value="💛">💛 Cariño</option>
+            <option value="🌸">🌸 Flor</option>
+            <option value="✨">✨ Magia</option>
+            <option value="🎵">🎵 Música</option>
+            <option value="💌">💌 Carta</option>
+          </select>
+        </div>
+
+        <textarea id="editNoteText" rows="3" class="w-full px-4 py-2.5 rounded-xl border border-custard-400 focus:outline-none focus:ring-2 focus:ring-cocoa font-body text-sm bg-custard-50 text-cocoa resize-none"></textarea>
+
+        <div class="flex justify-end gap-2 pt-2">
+          <button onclick="closeEditNoteModal()" class="px-4 py-2 rounded-xl text-xs font-bold text-cocoa-light hover:bg-gray-100">
+            Cancelar
+          </button>
+          <button onclick="saveEditedNote()" class="btn-squish bg-custard-300 hover:bg-custard-400 text-cocoa font-title font-bold text-xs px-5 py-2 rounded-xl border border-cocoa">
+            Guardar cambios
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="mt-8 bg-white/80 border-t border-custard-300 py-6 px-4 text-center text-xs text-cocoa-light">
+    <p class="font-semibold text-cocoa">
+      Karla &amp; Rome • Pompompurin Showcase
+    </p>
+    <p class="mt-1">
+      Hecho con cariño para Karla de parte de Rome.
+    </p>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- TOAST FEEDBACK                             -->
+  <!-- ========================================== -->
+  <div id="cleanToast" class="fixed bottom-6 right-6 bg-white px-4 py-3 rounded-2xl border-2 border-cocoa shadow-lg z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2.5 pointer-events-none text-xs font-semibold text-cocoa">
+    <span class="text-base" id="cleanToastIcon">🍮</span>
+    <span id="cleanToastMsg">¡Listo!</span>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC                           -->
+  <!-- ========================================== -->
+  <script>
+    // ========================================================
+    // 📝 NOTAS GUARDADAS EN EL CÓDIGO (Rome & Karla)
+    // Aquí puedes escribir o agregar notas directamente en el código
+    // para que queden guardadas en el repositorio de GitHub:
+    // ========================================================
+    const DEFAULT_SAVED_NOTES = [
+      {
+        id: "nota-1",
+        autor: "Rome",
+        fecha: "05/11/2026",
+        texto: "Recordar que Rome te quiere mucho y que vas a tener una excelente semana.",
+        icono: "🍮"
+      },
+      {
+        id: "nota-2",
+        autor: "Rome & Karla",
+        fecha: "08/11/2026",
+        texto: "Escuchar nuestras canciones juntos y disfrutar de un buen rato.",
+        icono: "🎵"
+      }
+    ];
+
+    // 1. Purin Interactive Phrases
+    const phrases = [
+      "¡Purin dice: Rome te quiere mucho, Karla! 🍮",
+      "Recordatorio: Eres muy inteligente y capaz ✨",
+      "¡Que tengas un día tranquilo y con cero estrés!",
+      "Hoy se vale comer algo rico sin culpa 🍰",
+      "Un abrazo fuerte de parte de Rome 🐾"
+    ];
+    let phraseIdx = 0;
+    let smileCount = 14;
+
+    function interactPurin(e) {
+      smileCount++;
+      document.getElementById('smileCount').textContent = smileCount;
+
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      document.getElementById('purinPhrase').textContent = `"${phrases[phraseIdx]}"`;
+
+      const img = document.getElementById('purinHeroImage');
+      img.classList.add('scale-95');
+      setTimeout(() => img.classList.remove('scale-95'), 150);
+
+      showToast('🍮', 'Purin te manda un saludo.');
+    }
+
+    // 2. Toggle Pose
+    let currentPose = 1;
+    function switchPurinPose() {
+      const img = document.getElementById('purinHeroImage');
+      if (currentPose === 1) {
+        img.src = 'images/vecteezy_sanrio-pompompurin-one_54755141.jpg';
+        currentPose = 2;
+        showToast('🐾', 'Purin cambió a pose feliz.');
+      } else {
+        img.src = 'images/vecteezy_cute-pompompurin-sanrio_54755124.jpg';
+        currentPose = 1;
+        showToast('🍮', 'Purin volvió a su pose tierna.');
+      }
+    }
+
+    // 3. Date Plan Roulette
+    const plansList = [
+      { icon: "☕", title: "Tarde de café y plática larga ☕🍰", desc: "Ir a un lugar tranquilo, pedir algo rico y platicar de todo sin prisas." },
+      { icon: "🍕", title: "Salir por una buena cena 🍕🍝", desc: "Buscar un lugar con buena comida, sentarnos a gusto y pasar la noche relajados." },
+      { icon: "🎬", title: "Noche de pelis con comida rica 🎬🍿", desc: "Quedarnos cómodos en casa, botanear y ver una película o serie pendiente." },
+      { icon: "🍦", title: "Caminata y helado 🍦🚶‍♂️", desc: "Pasear un rato tranquilos al aire libre y comer un buen postre." },
+      { icon: "🛍️", title: "Paseo de compras y chucherías 🛍️✨", desc: "Caminar por tiendas, ver cosas curiosas y reírnos un rato sin apuro." },
+      { icon: "🛣️", title: "Escapada de fin de semana 🚗🌄", desc: "Ir a un lugar nuevo cercano para desconectar completamente de la rutina." }
+    ];
+
+    function spinDateWheel() {
+      const btn = document.getElementById('spinWheelBtn');
+      btn.disabled = true;
+      btn.classList.add('opacity-50');
+
+      let counter = 0;
+      const interval = setInterval(() => {
+        const rand = plansList[Math.floor(Math.random() * plansList.length)];
+        document.getElementById('featuredPlanIcon').textContent = rand.icon;
+        document.getElementById('featuredPlanTitle').textContent = rand.title;
+        document.getElementById('featuredPlanDesc').textContent = rand.desc;
+        counter++;
+        if (counter > 8) {
+          clearInterval(interval);
+          btn.disabled = false;
+          btn.classList.remove('opacity-50');
+          showToast('🎲', '¡Plan seleccionado!');
+        }
+      }, 100);
+    }
+
+    // 4. Confetti Trigger
+    function triggerConfettiLove() {
+      if (window.confetti) {
+        confetti({
+          particleCount: 35,
+          spread: 60,
+          origin: { y: 0.7 },
+          colors: ['#f59e0b', '#fde68a', '#d97706', '#592100']
+        });
+      }
+      showToast('💛', 'Abrazo enviado.');
+    }
+
+    // ========================================================
+    // 5. SISTEMA PRIVADO DE NOTAS (CONTRASEÑA + EDICIÓN)
+    // ========================================================
+    const NOTES_PASSWORD = "teamomas";
+
+    function isNotesUnlocked() {
+      return sessionStorage.getItem('notesUnlocked') === 'true';
+    }
+
+    function checkNotesLockState() {
+      const lockedView = document.getElementById('notesLockedView');
+      const unlockedView = document.getElementById('notesUnlockedView');
+      if (isNotesUnlocked()) {
+        if (lockedView) lockedView.classList.add('hidden');
+        if (unlockedView) unlockedView.classList.remove('hidden');
+        renderNotes();
+      } else {
+        if (lockedView) lockedView.classList.remove('hidden');
+        if (unlockedView) unlockedView.classList.add('hidden');
+      }
+    }
+
+    function unlockNotes() {
+      const input = document.getElementById('notesPassInput');
+      const errorEl = document.getElementById('notesPassError');
+      const val = (input.value || '').trim().toLowerCase();
+
+      if (val === NOTES_PASSWORD) {
+        if (errorEl) errorEl.classList.add('hidden');
+        sessionStorage.setItem('notesUnlocked', 'true');
+        checkNotesLockState();
+        showToast('🔑', '¡Buzón desbloqueado con amor!');
+      } else {
+        if (errorEl) errorEl.classList.remove('hidden');
+        input.classList.add('ring-2', 'ring-rose-500');
+        setTimeout(() => input.classList.remove('ring-2', 'ring-rose-500'), 1500);
+      }
+    }
+
+    function lockNotes() {
+      sessionStorage.removeItem('notesUnlocked');
+      checkNotesLockState();
+      showToast('🔒', 'Buzón bloqueado.');
+    }
+
+    function getStoredNotes() {
+      try {
+        const stored = localStorage.getItem('karla_rome_secret_notes');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {
+        console.error(e);
+      }
+      return [...DEFAULT_SAVED_NOTES];
+    }
+
+    function saveStoredNotes(notes) {
+      localStorage.setItem('karla_rome_secret_notes', JSON.stringify(notes));
+      renderNotes();
+    }
+
+    function renderNotes() {
+      const grid = document.getElementById('notesGrid');
+      if (!grid) return;
+      const notes = getStoredNotes();
+      grid.innerHTML = '';
+
+      notes.forEach((note) => {
+        const isRome = note.autor.includes('Rome');
+        const bgClass = isRome ? 'bg-custard-100 border-custard-300' : 'bg-rose-50 border-rose-200';
+        const badgeClass = isRome ? 'bg-amber-200 text-amber-900' : 'bg-rose-200 text-rose-900';
+
+        const card = document.createElement('div');
+        card.className = `p-4 rounded-2xl border ${bgClass} shadow-xs flex flex-col justify-between text-xs text-cocoa transition-all hover:shadow-md`;
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-[10px] px-2 py-0.5 rounded-full ${badgeClass}">
+                De: ${escapeHtml(note.autor)}
+              </span>
+              <span class="text-sm">${note.icono || '🍮'}</span>
+            </div>
+            <p class="font-body text-sm text-cocoa-dark font-medium leading-relaxed mt-1">
+              "${escapeHtml(note.texto)}"
+            </p>
+          </div>
+          <div class="pt-3 border-t border-black/10 mt-3 flex items-center justify-between text-[11px] text-cocoa-light">
+            <span>${note.fecha || 'Reciente'}</span>
+            <div class="flex items-center gap-1">
+              <button onclick="openEditNoteModal('${note.id}')" title="Editar nota" class="px-2 py-0.5 hover:bg-black/5 rounded font-bold text-cocoa">
+                ✏️ Editar
+              </button>
+              <button onclick="deleteNote('${note.id}')" title="Eliminar nota" class="px-1.5 py-0.5 hover:bg-rose-100 rounded text-rose-700">
+                🗑️
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function saveNewNote() {
+      const textInput = document.getElementById('newNoteText');
+      const authorSelect = document.getElementById('newNoteAuthor');
+      const iconSelect = document.getElementById('newNoteIcon');
+      const text = textInput.value.trim();
+
+      if (!text) {
+        showToast('📝', 'Escribe algo primero en la nota.');
+        return;
+      }
+
+      const notes = getStoredNotes();
+      const now = new Date();
+      const dateStr = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+
+      notes.unshift({
+        id: 'nota-' + Date.now(),
+        autor: authorSelect.value,
+        fecha: dateStr,
+        texto: text,
+        icono: iconSelect.value
+      });
+
+      saveStoredNotes(notes);
+      textInput.value = '';
+      showToast('💌', 'Nota guardada exitosamente.');
+    }
+
+    function openEditNoteModal(noteId) {
+      const notes = getStoredNotes();
+      const note = notes.find(n => n.id === noteId);
+      if (!note) return;
+
+      document.getElementById('editNoteId').value = note.id;
+      document.getElementById('editNoteAuthor').value = note.autor;
+      document.getElementById('editNoteIcon').value = note.icono || '🍮';
+      document.getElementById('editNoteText').value = note.texto;
+
+      document.getElementById('editNoteModal').classList.remove('hidden');
+    }
+
+    function closeEditNoteModal() {
+      document.getElementById('editNoteModal').classList.add('hidden');
+    }
+
+    function saveEditedNote() {
+      const id = document.getElementById('editNoteId').value;
+      const author = document.getElementById('editNoteAuthor').value;
+      const icon = document.getElementById('editNoteIcon').value;
+      const text = document.getElementById('editNoteText').value.trim();
+
+      if (!text) {
+        showToast('⚠️', 'El texto no puede quedar vacío.');
+        return;
+      }
+
+      const notes = getStoredNotes();
+      const idx = notes.findIndex(n => n.id === id);
+      if (idx !== -1) {
+        notes[idx].autor = author;
+        notes[idx].icono = icon;
+        notes[idx].texto = text;
+        saveStoredNotes(notes);
+        closeEditNoteModal();
+        showToast('✏️', 'Nota actualizada con éxito.');
+      }
+    }
+
+    function deleteNote(noteId) {
+      if (!confirm('¿Seguro que deseas eliminar esta nota?')) return;
+      const notes = getStoredNotes().filter(n => n.id !== noteId);
+      saveStoredNotes(notes);
+      showToast('🗑️', 'Nota eliminada.');
+    }
+
+    // Copiar código de notas para pegarlo en el archivo de GitHub
+    function copyNotesCodeForGitHub() {
+      const notes = getStoredNotes();
+      const codeSnippet = `const DEFAULT_SAVED_NOTES = ` + JSON.stringify(notes, null, 2) + `;`;
+      navigator.clipboard.writeText(codeSnippet).then(() => {
+        showToast('📋', '¡Código copiado! Pégalo en DEFAULT_SAVED_NOTES de index.html');
+      }).catch(() => {
+        showToast('⚠️', 'No se pudo copiar automáticamente.');
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+      });
+    }
+
+    // 6. Toast Notification
+    let toastTimeout = null;
+    function showToast(icon, msg) {
+      const toast = document.getElementById('cleanToast');
+      document.getElementById('cleanToastIcon').textContent = icon;
+      document.getElementById('cleanToastMsg').textContent = msg;
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2400);
+    }
+
+    // Inicializar estado del buzón de notas
+    document.addEventListener('DOMContentLoaded', () => {
+      checkNotesLockState();
+    });
+    checkNotesLockState();
+  </script>
+</body>
+</html>
