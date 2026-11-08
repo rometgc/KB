@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error": "#ffffff",
+          "outline-variant": "#dac1b7",
+          "secondary-fixed-dim": "#dcc66e",
+          "on-tertiary-fixed": "#3d0026",
+          "inverse-surface": "#363113",
+          "primary-fixed-dim": "#ffb693",
+          "on-surface": "#201c02",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "tertiary-fixed-dim": "#ffafd3",
+          "on-surface-variant": "#54433c",
+          "inverse-primary": "#ffb693",
+          "surface-container-highest": "#ede3b8",
+          "surface": "#fff9ec",
+          "secondary": "#6e5e0d",
+          "background": "#fff9ec",
+          "inverse-on-surface": "#fcf1c5",
+          "surface-bright": "#fff9ec",
+          "surface-container-low": "#fff4c8",
+          "on-primary-container": "#ffa072",
+          "outline": "#87736a",
+          "surface-variant": "#ede3b8",
+          "on-tertiary-container": "#ff98ca",
+          "on-primary": "#ffffff",
+          "surface-container": "#f9eec2",
+          "on-primary-fixed-variant": "#76330d",
+          "on-secondary-fixed": "#221b00",
+          "tertiary-fixed": "#ffd8e7",
+          "on-error-container": "#93000a",
+          "on-tertiary-fixed-variant": "#85145a",
+          "tertiary-container": "#88175c",
+          "primary": "#592100",
+          "on-background": "#201c02",
+          "on-primary-fixed": "#351000",
+          "surface-container-high": "#f3e8bd",
+          "tertiary": "#660043",
+          "primary-fixed": "#ffdbcc",
+          "secondary-container": "#f6df84",
+          "secondary-fixed": "#f9e287",
+          "error-container": "#ffdad6",
+          "surface-dim": "#e5dab0",
+          "on-secondary-container": "#726212",
+          "primary-container": "#78350f",
+          "surface-tint": "#944a23",
+          "on-secondary-fixed-variant": "#534600",
+          "error": "#ba1a1a",
+          "surface-container-lowest": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "margin": "1rem",
+          "space-xs": "0.25rem",
+          "gutter-desktop": "1.5rem",
+          "gutter": "1rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "margin-desktop": "3rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem"
+        },
+        "fontFamily": {
+          "headline-xl": [
+            "Comfortaa"
+          ],
+          "headline-xl-mobile": [
+            "Comfortaa"
+          ],
+          "headline-lg-mobile": [
+            "Comfortaa"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Comfortaa"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Comfortaa"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Comfortaa"
+          ]
+        },
+        "fontSize": {
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl-mobile": [
+            "30px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(120,53,15,0.06)]"><div class="flex flex-col"><div class="pt-space-lg px-space-lg pb-space-md flex items-center gap-space-sm"><div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shadow-[0_2px_8px_rgba(120,53,15,0.12)] p-1 overflow-hidden shrink-0"><img alt="Pompompurin icono" class="w-full h-full object-contain filter drop-shadow-sm hover:scale-110 transition-transform" src="../images/vecteezy_cute-pompompurin-sanrio_54755124.jpg"/></div><div><span class="font-headline-sm text-headline-sm text-primary block leading-none">Karla &amp; Rome</span><span class="font-label-sm text-label-sm text-on-surface-variant block mt-space-xs tracking-wider">PURIN SPECIAL ♥</span></div></div><div class="mx-space-lg mb-space-md h-3 bg-secondary-fixed/50 rounded-full flex items-center justify-center"><div class="w-16 h-1 bg-primary/20 rounded-full"></div></div><nav class="px-space-md space-y-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-headline-sm font-semibold shadow-[0_2px_6px_rgba(120,53,15,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-headline-sm font-semibold shadow-[0_2px_6px_rgba(120,53,15,0.2)]" href="../index.html"><span class="material-symbols-outlined text-[20px]">stars</span><span class="font-label-lg text-label-lg">Showcase Principal</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-secondary-container text-on-secondary-container font-headline-sm font-semibold shadow-[0_2px_6px_rgba(120,53,15,0.08)]" data-path="inicio" href="#"><span class="material-symbols-outlined text-[20px]">cottage</span><span class="font-label-lg text-label-lg">Inicio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="polaroids-y-recuerdos" href="#"><span class="material-symbols-outlined text-[20px]">photo_library</span><span class="font-label-lg text-label-lg">Polaroids &amp; Recuerdos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="cartitas-secretas" href="#"><span class="material-symbols-outlined text-[20px]">mark_email_unread</span><span class="font-label-lg text-label-lg">Cartitas Secretas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="juegos-y-ruleta" href="#"><span class="material-symbols-outlined text-[20px]">casino</span><span class="font-label-lg text-label-lg">Juegos &amp; Ruleta</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="nuestra-musica" href="#"><span class="material-symbols-outlined text-[20px]">queue_music</span><span class="font-label-lg text-label-lg">Nuestra Música</span></a></nav></div><div class="p-space-lg relative"><div class="absolute -top-7 right-6 w-14 h-14 pointer-events-none drop-shadow-md z-10"><img alt="Purin sticker" class="w-full h-full object-contain rotate-12 hover:rotate-0 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRT93evdxWZYvtH8N6sn12v_6PgI9TM5aTcQhlXBAs1fMRqr_G6XpH8OkXIReZXWUprrg259fBsHRNEHUuLeSaeyITBmqepD0AaUFXSQg4Qo9uj2_TTONFi50pBWFd0TA4o11qNjr-C44eUCt7vs2S5fLgq_61FqUvtDxEfzXGdEQSfVFFT_5enBrIfQ3MKvYVMvePvWfGwnnrSKQcKkhLY-HIExFKMRs8tKQlPix9OKMT-YAsYr3G"/></div><div class="bg-surface-container rounded-lg p-space-md shadow-[0_2px_8px_-2px_rgba(120,53,15,0.08)] flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">favorite</span></div><div class="flex-1 min-w-0"><p class="font-label-sm text-label-sm text-on-surface-variant truncate">Días juntos</p><p class="font-headline-sm text-headline-sm text-primary">324 días</p></div><span class="material-symbols-outlined text-outline-variant text-[18px]">auto_awesome</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(120,53,15,0.04)] flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded-full shadow-[0_1px_4px_rgba(120,53,15,0.06)]"><span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">Conectados con amor</span></div><div class="hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md bg-surface-container-lowest/60 px-space-sm py-space-xs rounded-full"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span><span>Último apunte hace 10m</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><button aria-label="Pegatinas" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">sentiment_satisfied</span></button><button aria-label="Notificaciones de pareja" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(120,53,15,0.2)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="max-w-[1280px] w-full mx-auto px-gutter-desktop py-space-lg space-y-space-xl">
+<!-- Welcome Scrapbook Hero Banner -->
+<section class="relative bg-surface-container rounded-xl p-space-xl shadow-[0_12px_28px_-6px_rgba(120,53,15,0.1)] overflow-hidden">
+<!-- Washi tape decoration at top -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-44 h-8 bg-secondary-fixed/80 backdrop-blur-sm -rotate-1 rounded-sm shadow-[0_2px_4px_rgba(120,53,15,0.08)] flex items-center justify-center pointer-events-none">
+<span class="w-full h-[1px] bg-primary/10"></span>
+</div>
+<!-- Corner cute stamp -->
+<div class="absolute top-4 right-5 rotate-6 bg-surface-container-lowest/80 px-space-md py-space-xs rounded-full shadow-[0_2px_8px_rgba(120,53,15,0.06)] flex items-center gap-space-xs pointer-events-none">
+<span class="text-tertiary font-headline-sm text-headline-sm leading-none">♥</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase">Pudín Club VIP</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<!-- Text intro -->
+<div class="lg:col-span-8 space-y-space-md relative">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center gap-space-xs bg-secondary-container text-on-secondary-container px-space-md py-space-xs rounded-full shadow-[0_1px_4px_rgba(120,53,15,0.08)] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">favorite</span>
+              Nivel de conexión: Inexplicable pero perfecto
+            </span>
+<button aria-label="Guardar latido" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary hover:text-tertiary flex items-center justify-center transition-transform active:scale-90 shadow-[0_2px_6px_rgba(120,53,15,0.08)]" id="btnFavHeart" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="flex-1">
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+            ¡Hola, mi niña hermosa Karla! <span class="inline-block hover:animate-bounce cursor-pointer">🍮💙</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+            Un rinconcito dulce hecho solo para ti con todo el amor de Rome que te quiere infinito. Hoy se vale pedir mimos extra, comer postre y sonreír juntitos.
+          </p>
+</div>
+<div class="hidden sm:block shrink-0 relative">
+<img alt="Pompompurin con amor" class="w-24 h-24 lg:w-28 lg:h-28 object-contain filter drop-shadow-md rotate-3 hover:scale-105 hover:rotate-6 transition-transform" src="../images/vecteezy_sanrio-pompompurin-one_54755141.jpg"/>
+</div>
+</div>
+<!-- Mood Purin Bar -->
+<div class="pt-space-xs space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+                ¿Cómo te sientes hoy? — Mood Purin
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="moodSignalStatus">Toca tu estado para enviarme una señal telepática 🐶</span>
+</div>
+<div class="flex flex-wrap gap-space-sm pt-space-xs" id="moodContainer">
+<button class="mood-pill group flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-full shadow-[0_2px_6px_rgba(120,53,15,0.06)] hover:bg-secondary-container transition-all" onclick="selectMood(this, 'Feliz 🌟')" type="button">
+<span class="text-base group-hover:scale-125 transition-transform">🌟</span>
+<span class="font-label-md text-label-md text-on-surface">Feliz</span>
+</button>
+<button class="mood-pill group flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-full shadow-[0_2px_6px_rgba(120,53,15,0.06)] hover:bg-secondary-container transition-all" onclick="selectMood(this, 'Mimosa 🧸')" type="button">
+<span class="text-base group-hover:scale-125 transition-transform">🧸</span>
+<span class="font-label-md text-label-md text-on-surface">Mimosa</span>
+</button>
+<button class="mood-pill group flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-full shadow-[0_2px_6px_rgba(120,53,15,0.06)] hover:bg-secondary-container transition-all" onclick="selectMood(this, 'Sueñito ☁️')" type="button">
+<span class="text-base group-hover:scale-125 transition-transform">☁️</span>
+<span class="font-label-md text-label-md text-on-surface">Sueñito</span>
+</button>
+<button class="mood-pill group flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-sm rounded-full shadow-[0_2px_6px_rgba(120,53,15,0.06)] hover:bg-secondary-container transition-all" onclick="selectMood(this, 'Con antojo 🍮')" type="button">
+<span class="text-base group-hover:scale-125 transition-transform">🍮</span>
+<span class="font-label-md text-label-md text-on-surface">Con antojo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Pudding Squish Box -->
+<div class="lg:col-span-4 flex justify-center">
+<div class="w-full max-w-xs bg-surface-container-lowest rounded-lg p-space-md shadow-[0_10px_24px_-4px_rgba(120,53,15,0.12)] text-center relative">
+<div class="absolute -top-3 right-6 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded-full shadow-[0_2px_4px_rgba(120,53,15,0.08)]">
+              ¡Rebote Suavecito!
+            </div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pellizcar pudín 🍮</p>
+<!-- Pudding Mascot Graphic / Interactive Area -->
+<div class="cursor-pointer select-none my-space-sm py-space-xs transition-transform duration-200 active:scale-90 flex justify-center" id="puddingMascot" onclick="squishPudding()">
+<div class="relative w-36 h-36 flex items-center justify-center p-2 rounded-2xl bg-secondary-container/30 hover:bg-secondary-container/50 group transition-all">
+<img alt="Pompompurin en flan" class="w-full h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida/ALJJyrAUzbm3nh1mV1H0pZ-_m68arHG8rRmWmEQB91_t8uIqiJO6ONbS2NVgL3vwieu0QSBXlo_Ae1GLtaRnhcU-g4OyqhCU_Gc_xJK1J1gDbd2kc0CmZWFGXCErPQO-v5X2PrncP1hekW4HtdPpDmp2iq7r4SqdFsCAbhv6ei20po5m4Em54STFC_YK18IRc-cuyUWxax_sc0wYN6gx6cJHtbY_GVYL3pjvqj5JLne8SHnI"/>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-md py-space-xs px-space-sm mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Apapachos acumulados</span>
+<p class="font-headline-md text-headline-md text-primary font-bold" id="apapachoCounter">42 apapachos</p>
+</div>
+<button class="w-full bg-secondary-fixed hover:bg-secondary-container text-primary font-label-lg text-label-lg py-space-sm rounded-full shadow-[0_3px_0_#78350F] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-space-xs" onclick="squishPudding()" type="button">
+<span class="material-symbols-outlined text-[18px]">pets</span>
+<span>¡Apapachar! 🐾</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Desktop Two-Column Scrapbook Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Recuerdos & Cartitas (7 cols) -->
+<section class="lg:col-span-7 space-y-space-xl">
+<!-- Polaroids Gallery -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Nuestras Polaroids</h2>
+</div>
+<button class="group flex items-center gap-space-xs text-primary hover:text-tertiary font-label-md text-label-md bg-surface-container-high px-space-md py-space-xs rounded-full shadow-[0_2px_4px_rgba(120,53,15,0.06)] transition-all" type="button">
+<span>Ver álbum secreto</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
+<!-- Polaroid 1 -->
+<div class="group relative bg-surface-container-lowest p-space-md pb-space-xl rounded-lg shadow-[0_12px_24px_-4px_rgba(120,53,15,0.14)] -rotate-1 hover:rotate-0 hover:scale-[1.02] transition-all duration-300">
+<!-- Sticker scrapbook corner -->
+<div class="absolute -bottom-3 -right-3 w-12 h-12 z-20 pointer-events-none drop-shadow-md">
+<img alt="Sticker Purin" class="w-full h-full object-contain rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJWDjo5xP06D9WU-3HBl6dl076KMDkXiYlqVYLQsTW1fle1QR3W71afTPHfr_wO7rboJQFu8CNce9scAOLRSiETATP7_xlyCnBlAincJL4AXeallwNaZq2n1fyc3T_YWex0vMGng-HiHkeJ-1TkcVxNjIEVs3AUd_zVv498tF5Okvr2Yw6KhBtxNXzMLI5bQdEzEf0gRWNTIP5VEQqhx-n-er8N5kwdCZOgllK05-GzSxEsUAdKstT"/>
+</div>
+<!-- Washi tape top right -->
+<div class="absolute -top-3 right-8 w-24 h-6 bg-tertiary-fixed/80 backdrop-blur-xs rotate-3 shadow-[0_1px_3px_rgba(120,53,15,0.1)] rounded-xs pointer-events-none"></div>
+<div class="w-full h-56 rounded-md overflow-hidden bg-surface-container-low mb-space-md shadow-inner flex items-center justify-center p-2">
+<img class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" alt="Pompompurin tierno" src="../images/vecteezy_cute-pompompurin-sanrio_54755124.jpg"/>
+</div>
+<div class="space-y-space-xs px-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">14 de Octubre</span>
+<span class="inline-flex items-center gap-0.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">star</span> Inolvidable
+                  </span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary leading-snug">
+                  "Cuando nos reímos tanto que casi tiramos el café..."
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Esa tarde que el mesero nos miró raro porque le pedimos carita sonriente a la espuma de vainilla.
+                </p>
+</div>
+</div>
+<!-- Polaroid 2 -->
+<div class="group relative bg-surface-container-lowest p-space-md pb-space-xl rounded-lg shadow-[0_12px_24px_-4px_rgba(120,53,15,0.14)] rotate-2 hover:rotate-0 hover:scale-[1.02] transition-all duration-300">
+<!-- Sticker scrapbook corner -->
+<div class="absolute -top-4 -left-3 w-12 h-12 z-20 pointer-events-none drop-shadow-md">
+<img alt="Sticker Purin Sonriendo" class="w-full h-full object-contain -rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRT93evdxWZYvtH8N6sn12v_6PgI9TM5aTcQhlXBAs1fMRqr_G6XpH8OkXIReZXWUprrg259fBsHRNEHUuLeSaeyITBmqepD0AaUFXSQg4Qo9uj2_TTONFi50pBWFd0TA4o11qNjr-C44eUCt7vs2S5fLgq_61FqUvtDxEfzXGdEQSfVFFT_5enBrIfQ3MKvYVMvePvWfGwnnrSKQcKkhLY-HIExFKMRs8tKQlPix9OKMT-YAsYr3G"/>
+</div>
+<!-- Washi tape top left -->
+<div class="absolute -top-3 left-6 w-24 h-6 bg-secondary-fixed/90 backdrop-blur-xs -rotate-2 shadow-[0_1px_3px_rgba(120,53,15,0.1)] rounded-xs pointer-events-none"></div>
+<div class="w-full h-56 rounded-md overflow-hidden bg-surface-container-low mb-space-md shadow-inner flex items-center justify-center p-2">
+<img class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" alt="Purin feliz" src="../images/vecteezy_sanrio-pompompurin-one_54755141.jpg"/>
+</div>
+<div class="space-y-space-xs px-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider">Tarde de hojas secas</span>
+<span class="inline-flex items-center gap-0.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">favorite</span> Sin prisa
+                  </span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary leading-snug">
+                  "Caminando sin rumbo fijo pero deseando que no termine."
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Juntamos 12 hojitas en forma de corazón y tú me regalaste la más dorada de todas.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Corkboard / Scrapbook Sticky Notes & Letters -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-[0_8px_20px_rgba(120,53,15,0.06)] relative overflow-hidden">
+<!-- Washi stamp decoration corner -->
+<div class="absolute -right-2 -bottom-2 w-16 h-16 pointer-events-none opacity-80 rotate-6">
+<img alt="Purin sticker sello" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJWDjo5xP06D9WU-3HBl6dl076KMDkXiYlqVYLQsTW1fle1QR3W71afTPHfr_wO7rboJQFu8CNce9scAOLRSiETATP7_xlyCnBlAincJL4AXeallwNaZq2n1fyc3T_YWex0vMGng-HiHkeJ-1TkcVxNjIEVs3AUd_zVv498tF5Okvr2Yw6KhBtxNXzMLI5bQdEzEf0gRWNTIP5VEQqhx-n-er8N5kwdCZOgllK05-GzSxEsUAdKstT"/>
+</div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">mark_email_unread</span>
+<h2 class="font-headline-md text-headline-md text-primary">Cartitas &amp; Notas Secretas</h2>
+</div>
+<button class="bg-surface-container-lowest hover:bg-secondary-fixed text-primary px-space-md py-space-xs rounded-full font-label-md text-label-md shadow-[0_2px_4px_rgba(120,53,15,0.08)] flex items-center gap-space-xs transition-all" onclick="showSparkleToast()" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">edit_note</span>
+<span>+ Escribirte nota con chispitas</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md items-stretch">
+<!-- Sticky Note with pushpin -->
+<div class="relative bg-secondary-fixed/40 p-space-md rounded-lg shadow-[0_4px_12px_rgba(120,53,15,0.08)] -rotate-1 flex flex-col justify-between">
+<!-- Pushpin -->
+<div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow-md">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="pt-space-xs space-y-space-xs">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-bold">Cosas que me encantan de ti #28</span>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                  "Tu forma de sonreír con los ojos achicaditos cuando algo te da mucha ternura. Podría quedarme a vivir en ese gesto para siempre."
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Tu flancito 🍮</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hoy, 09:15 AM</span>
+</div>
+</div>
+<!-- Locked Scratch-Off Secret Note -->
+<div class="relative bg-surface-container-highest p-space-md rounded-lg shadow-[0_4px_12px_rgba(120,53,15,0.08)] rotate-1 flex flex-col justify-between cursor-pointer group" id="secretNoteCard" onclick="revealSecretNote()">
+<div class="absolute top-3 right-3 bg-tertiary text-on-tertiary px-space-xs py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+                Confidencial
+              </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary mb-space-xs">Confesión Bloqueada 💌</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Un mensajito guardado bajo llave con dulce de leche.</p>
+</div>
+<div class="my-space-md py-space-md px-space-sm bg-surface-container-lowest rounded-md text-center shadow-inner relative overflow-hidden transition-all" id="secretNoteTeaser">
+<div class="flex flex-col items-center gap-space-xs">
+<span class="material-symbols-outlined text-[24px] text-tertiary animate-pulse">lock_open</span>
+<span class="font-label-md text-label-md text-primary font-bold">Tocar para revelar ✨</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Solo para tus ojitos hermosos</span>
+</div>
+</div>
+<div class="hidden my-space-sm p-space-sm bg-secondary-container rounded-md text-on-secondary-container font-body-md text-body-md shadow-inner animate-fadeIn" id="secretNoteContent">
+                "Karla hermosa: Rome te ama con todo su corazón. Prometo comprarte los postres que quieras, darte miles de mimos y estar siempre para ti. ¡Eres mi persona favorita en todo el universo! 💖🍮💙"
+              </div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Estado: <span class="font-semibold text-primary" id="secretStatusText">Sellado con amor</span></span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">auto_awesome</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Zona Didáctica, Juegos, Ruleta & Música (5 cols) -->
+<section class="lg:col-span-5 space-y-space-xl">
+<!-- Interactive Ruleta de Citas Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_12px_28px_-6px_rgba(120,53,15,0.1)] relative">
+<!-- Tape top -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-6 bg-secondary-fixed/90 backdrop-blur-xs rotate-1 shadow-sm rounded-xs pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Mini-Juego de Pareja</span>
+<h2 class="font-headline-md text-headline-md text-primary leading-tight">¿Qué hacemos hoy? 🎡</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-[0_2px_6px_rgba(120,53,15,0.08)]">
+<span class="material-symbols-outlined text-[20px]">casino</span>
+</div>
+</div>
+<!-- Wheel Visual representation -->
+<div class="flex flex-col items-center text-center space-y-space-md">
+<div class="relative w-40 h-40 rounded-full bg-surface-container-high p-2 shadow-[0_6px_16px_rgba(120,53,15,0.1)] flex items-center justify-center">
+<!-- Decorative segmented circle SVG -->
+<svg class="w-full h-full transition-transform duration-1000 ease-out" id="rouletteWheel" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="#f6df84" r="46"></circle>
+<!-- 4 quadrants -->
+<path d="M50 50 L50 4 A46 46 0 0 1 96 50 Z" fill="#ffd8e7"></path>
+<path d="M50 50 L96 50 A46 46 0 0 1 50 96 Z" fill="#ede3b8"></path>
+<path d="M50 50 L50 96 A46 46 0 0 1 4 50 Z" fill="#ffb693"></path>
+<path d="M50 50 L4 50 A46 46 0 0 1 50 4 Z" fill="#f9e287"></path>
+<!-- Center knob -->
+<circle cx="50" cy="50" fill="#78350f" r="14"></circle>
+<circle cx="50" cy="50" fill="#fff9ec" r="6"></circle>
+</svg>
+<!-- Pointer marker -->
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-5 bg-primary rounded-b-full shadow-md z-10"></div>
+</div>
+<!-- Current / Spun Date Suggestion -->
+<div class="w-full bg-surface-container rounded-lg p-space-sm shadow-inner transition-all" id="datePlanBox">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Plan Seleccionado:</p>
+<p class="font-headline-sm text-headline-sm text-primary font-bold" id="datePlanTitle">Maratón de pelis en cobijas 🎬</p>
+<p class="font-body-sm text-body-sm text-on-surface mt-1" id="datePlanDesc">Con palomitas de mantequilla y gomitas aciditas.</p>
+</div>
+<button class="w-full bg-secondary-fixed hover:bg-secondary-container text-primary font-label-lg text-label-lg py-space-sm px-space-md rounded-full shadow-[0_3px_0_#78350F] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-space-xs" onclick="spinRoulette()" type="button">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+<span>🎲 Girar ruleta de citas</span>
+</button>
+</div>
+</div>
+<!-- Quiz de Cómplices -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-[0_8px_20px_rgba(120,53,15,0.08)]">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Pregunta del Día</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Votos: 2 / 2 sincronizados</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-md">
+            ¿Quién le tiene más ganas a un postrecito ahora? 🍰
+          </h3>
+<div class="space-y-space-xs" id="quizOptions">
+<button class="w-full text-left bg-surface-container-lowest hover:bg-secondary-container p-space-sm rounded-lg flex items-center justify-between transition-all group shadow-sm" onclick="voteQuiz(this, 1)" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center font-label-sm text-label-sm text-primary transition-colors">A</span>
+<span class="font-label-lg text-label-lg text-on-surface">Tú, 100% obvio (flan lover)</span>
+</div>
+<span class="quiz-stat hidden font-label-md text-label-md text-primary font-bold">65%</span>
+</button>
+<button class="w-full text-left bg-surface-container-lowest hover:bg-secondary-container p-space-sm rounded-lg flex items-center justify-between transition-all group shadow-sm" onclick="voteQuiz(this, 2)" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary flex items-center justify-center font-label-sm text-label-sm text-primary transition-colors">B</span>
+<span class="font-label-lg text-label-lg text-on-surface">Yo, sin duda pero compartido contigo</span>
+</div>
+<span class="quiz-stat hidden font-label-md text-label-md text-primary font-bold">35%</span>
+</button>
+</div>
+</div>
+<!-- Nuestra Melodía Cozy (Music Player) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_12px_28px_-6px_rgba(120,53,15,0.1)] relative">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Nuestra Melodía Cozy</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">En bucle ♥</span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Vinyl/Album mini cover -->
+<div class="relative w-16 h-16 rounded-full bg-primary-container flex items-center justify-center shadow-[0_4px_10px_rgba(120,53,15,0.25)] flex-shrink-0 animate-[spin_8s_linear_infinite]" id="vinylDisc">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-headline-sm text-headline-sm text-primary truncate">Dulce Como Flan</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Purin &amp; Los Cómplices • Lo-Fi Acústico</p>
+<!-- Progress bar -->
+<div class="mt-space-xs flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1:42</span>
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="w-3/5 h-full bg-secondary rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2:54</span>
+</div>
+</div>
+<!-- Mini control -->
+<button aria-label="Reproducir o pausar" class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center shadow-sm hover:scale-110 active:scale-95 transition-all" id="btnPlayPause" onclick="togglePlayState()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="playIcon">pause</span>
+</button>
+</div>
+</div>
+<!-- Daily Purin Fortune / Little Note -->
+<div class="bg-secondary-fixed/50 rounded-xl p-space-md shadow-[0_4px_12px_rgba(120,53,15,0.06)] flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[20px]">cookie</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Consejo del Flan de hoy:</span>
+<p class="font-headline-sm text-headline-sm text-primary leading-snug mt-0.5">
+              "Si sonreíste hoy, ya ganamos el día. Si no, avísame y te llevo un abrazo express."
+            </p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Decorative toast alert for interactive feedback -->
+<div class="fixed bottom-6 right-6 bg-surface-container-lowest px-space-lg py-space-md rounded-xl shadow-[0_12px_28px_-4px_rgba(120,53,15,0.18)] z-50 transform translate-y-32 opacity-0 transition-all duration-300 flex items-center gap-space-sm pointer-events-none" id="sparkleToast">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary leading-none" id="toastTitle">¡Chispita enviada!</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="toastMessage">Tu amor ha quedado registrado en el librito.</p>
+</div>
+</div>
+<script>
+    // Apapacho counter micro-interaction
+    let apapachos = 42;
+    function squishPudding() {
+      apapachos++;
+      const counter = document.getElementById('apapachoCounter');
+      if (counter) {
+        counter.textContent = apapachos + ' apapachos';
+      }
+      
+      const mascot = document.getElementById('puddingMascot');
+      if (mascot) {
+        mascot.classList.add('scale-90', 'rotate-3');
+        setTimeout(() => {
+          mascot.classList.remove('scale-90', 'rotate-3');
+        }, 180);
+      }
+      triggerToast('¡Apapacho recibido! 🐾', 'El pudín rebotó con amor y dulzura.');
+    }
+
+    // Mood selection
+    function selectMood(btn, mood) {
+      document.querySelectorAll('.mood-pill').forEach(b => {
+        b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        b.classList.add('bg-surface-container-lowest');
+      });
+      btn.classList.remove('bg-surface-container-lowest');
+      btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+
+      const status = document.getElementById('moodSignalStatus');
+      if (status) {
+        status.textContent = '¡Señal enviada! Estado: ' + mood + ' 💖';
+      }
+      triggerToast('Mood Compartido ✨', 'Tu amor ya sabe que andas: ' + mood);
+    }
+
+    // Secret Scratch-Off note reveal
+    let noteRevealed = false;
+    function revealSecretNote() {
+      if (noteRevealed) return;
+      noteRevealed = true;
+      const teaser = document.getElementById('secretNoteTeaser');
+      const content = document.getElementById('secretNoteContent');
+      const statusText = document.getElementById('secretStatusText');
+
+      if (teaser) teaser.classList.add('hidden');
+      if (content) content.classList.remove('hidden');
+      if (statusText) statusText.textContent = '¡Desbloqueado! ✨';
+
+      triggerToast('¡Mensaje Abierto! 💌', 'Solo para ti con extra de cariño.');
+    }
+
+    // Roulette of date plans
+    const datePlans = [
+      { title: "Maratón de pelis en cobijas 🎬", desc: "Con palomitas de mantequilla y gomitas aciditas." },
+      { title: "Tarde de café y flan casero 🍮", desc: "Platicar horas de la vida en nuestro rinconcito favorito." },
+      { title: "Paseo a comprar stickers y chucherías 🛍️", desc: "Elegir las libretas más bonitas sin culpa alguna." },
+      { title: "Noche de cocinar pizza juntos 🍕", desc: "Ponerle piña (o no) y reírnos de la masa deforme." },
+      { title: "Caminata bajo las luces del parque 🌙", desc: "Mano con mano y un helado de dos bolas." }
+    ];
+    let rouletteDeg = 0;
+
+    function spinRoulette() {
+      const wheel = document.getElementById('rouletteWheel');
+      const planTitle = document.getElementById('datePlanTitle');
+      const planDesc = document.getElementById('datePlanDesc');
+
+      rouletteDeg += 720 + Math.floor(Math.random() * 360);
+      if (wheel) {
+        wheel.style.transform = `rotate(${rouletteDeg}deg)`;
+      }
+
+      const randomPlan = datePlans[Math.floor(Math.random() * datePlans.length)];
+
+      setTimeout(() => {
+        if (planTitle && planDesc) {
+          planTitle.textContent = randomPlan.title;
+          planDesc.textContent = randomPlan.desc;
+        }
+        triggerToast('¡Plan Listo! 🎲', randomPlan.title);
+      }, 950);
+    }
+
+    // Quiz Vote
+    function voteQuiz(btn, option) {
+      document.querySelectorAll('#quizOptions button').forEach(b => {
+        b.classList.remove('bg-secondary-container');
+        b.classList.add('bg-surface-container-lowest');
+        const stat = b.querySelector('.quiz-stat');
+        if (stat) stat.classList.remove('hidden');
+      });
+      btn.classList.add('bg-secondary-container');
+      triggerToast('¡Respuesta Guardada! 🍰', 'Ambos sabemos que la respuesta era esa.');
+    }
+
+    // Music Player toggle
+    let isPlaying = true;
+    function togglePlayState() {
+      isPlaying = !isPlaying;
+      const vinyl = document.getElementById('vinylDisc');
+      const icon = document.getElementById('playIcon');
+
+      if (isPlaying) {
+        if (vinyl) vinyl.style.animationPlayState = 'running';
+        if (icon) icon.textContent = 'pause';
+      } else {
+        if (vinyl) vinyl.style.animationPlayState = 'paused';
+        if (icon) icon.textContent = 'play_arrow';
+      }
+    }
+
+    // Sparkle Toast helper
+    function showSparkleToast() {
+      triggerToast('Nota Nueva Creada 📝', 'Se ha guardado un borrador con chispitas.');
+    }
+
+    function triggerToast(title, message) {
+      const toast = document.getElementById('sparkleToast');
+      const toastTitle = document.getElementById('toastTitle');
+      const toastMsg = document.getElementById('toastMessage');
+
+      if (!toast) return;
+      if (toastTitle) toastTitle.textContent = title;
+      if (toastMsg) toastMsg.textContent = message;
+
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }, 2600);
+    }
+
+    // Favorite heart bounce
+    const btnFav = document.getElementById('btnFavHeart');
+    if (btnFav) {
+      btnFav.addEventListener('click', () => {
+        btnFav.classList.toggle('text-tertiary');
+        triggerToast('¡Latido Compartido! ♥', 'Pompompurin dio un saltito de emoción.');
+      });
+    }
+  </script>
+</div></main></div></body></html>
